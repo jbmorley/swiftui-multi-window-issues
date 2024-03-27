@@ -97,7 +97,7 @@ struct ExampleApp: App {
 
 ```
 
-This correctly handles `URL.main` (`x-example://main`) and `URL.info`  (`x-example://info`), creating or foregrounding the appropriate `WindowGroup`. However, since neither window allows wildcard events, launching the app from the App Library will always create a new window. If we 'fix' this by adding allowing the wildcard in the main window, info URLs will always be routed to the main window, breaking the model.
+This correctly handles `URL.main` (`x-example://main`) and `URL.info`  (`x-example://info`), creating or foregrounding the appropriate `WindowGroup`. However, since neither window allows wildcard events, launching the app from the App Library will always create a new window. If we 'fix' this by adding allowing the wildcard in the main window, info URLs will always be routed to the main window, breaking the window group selection behaviour. 🫠
 
 ## Extra Credit
 
