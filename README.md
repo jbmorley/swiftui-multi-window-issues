@@ -52,7 +52,7 @@ WindowGroup {
 }
 ```
 
-While this ensures the window is foregrounded:
+While this ensures the existing window is foregrounded:
 
 ```swift
 WindowGroup {
