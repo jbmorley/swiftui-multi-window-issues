@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @Environment(\.openURL) private var openURL
+
+    let name: String
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(name)
+            Button {
+                openURL(.main)
+            } label: {
+                Text("Open Main Window")
+            }
+            Button {
+                openURL(.info)
+            } label: {
+                Text("Open Info Window")
+            }
         }
         .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(name: "Name")
 }
