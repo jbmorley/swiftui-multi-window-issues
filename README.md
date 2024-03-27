@@ -61,7 +61,7 @@ WindowGroup {
 }
 ```
 
-This implies that we're launched with a magic event on iPadOS when the user opens the app from the App Library. This makes some sense, but I can't find any documentation about this anywhere and it's not passed to an `.onOpenURL` modifier. I cannot see if it's passed to `.onContinueUserActivity` as I don't know what the activity type is to test.
+This implies that we're launched with a magic event on iPadOS when the user opens the app from the App Library. This makes some sense, but I can't find any documentation about this anywhere and it's not passed to an `.onOpenURL` modifier. (I also cannot see if it's passed to `.onContinueUserActivity` as I don't know what the activity type is to test for.)
 
 Unfortunately, while passing a wildcard to `allowing` ensures our main window is correctly foregrounded, it breaks the behavior where a `WindowGroup` is able to filter based on URL, since the main window is always opened.
 
